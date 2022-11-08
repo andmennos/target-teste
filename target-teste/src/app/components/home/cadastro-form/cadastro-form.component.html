@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>Novo Cadastro</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome:"
+        [(ngModel)]="cadastro.nome"
+        name="nome"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Tel:"
+        [(ngModel)]="cadastro.tel"
+        name="tel"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="criaCadastro()" color="primary">
+    Salvar
+  </button>
+
+  <button mat-raised-button (click)="limpar()">Limpar</button>
+</mat-card>

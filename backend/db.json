@@ -1,0 +1,39 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "nome": "Anderson Ferreira",
+      "tel": "(11) 9 9999-9999"
+    },
+    {
+      "id": 2,
+      "nome": "Felipe Oliveira",
+      "tel": "(11) 9 8888-8888"
+    },
+    {
+      "nome": "as",
+      "tel": "as",
+      "id": 3
+    },
+    {
+      "nome": "",
+      "tel": "",
+      "id": 4
+    },
+    {
+      "nome": "",
+      "tel": "",
+      "id": 5
+    },
+    {
+      "nome": "",
+      "tel": "",
+      "id": 6
+    },
+    {
+      "nome": "asdad",
+      "tel": "asads",
+      "id": 7
+    }
+  ]
+}
