@@ -1,2 +1,39 @@
-teste
-<app-lista-cadastros></app-lista-cadastros>
+<div class="tabela">
+  <div class="busca">
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        placeholder="Busque"
+        autocomplete="off"
+        (keyup)="busca($event)"
+      />
+    </mat-form-field>
+  </div>
+
+  <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Id.</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
+    </ng-container>
+
+    <!-- Tel Column -->
+    <ng-container matColumnDef="tel">
+      <th mat-header-cell *matHeaderCellDef>Telefone</th>
+      <td mat-cell *matCellDef="let element">{{ element.tel }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr>
+      <button (click)="excluir()">Excluir</button>
+    </tr>
+  </table>
+
+  <mat-paginator #paginator [pageSizeOptions]="[10, 20, 50]"> </mat-paginator>
+</div>

@@ -3,7 +3,7 @@ import { Cadastro } from '../home/cadastro-form/cadastro.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 const API: string = environment.apiURL;
 
@@ -27,5 +27,9 @@ export class ServiceService {
 
   verCadastros(): Observable<Cadastro[]> {
     return this.httpClient.get<Cadastro[]>(API);
+  }
+
+  excluir(id: string): Observable<Cadastro> {
+    return this.httpClient.delete(API);
   }
 }
