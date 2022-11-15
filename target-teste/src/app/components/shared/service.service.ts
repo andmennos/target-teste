@@ -1,9 +1,10 @@
+import { Cadastro } from './../home/cadastro-form/models/cadastro.model';
 import { environment } from '../../../environments/environment';
-import { Cadastro } from '../home/cadastro-form/cadastro.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
 
 const API: string = environment.apiURL;
 
@@ -11,6 +12,7 @@ const API: string = environment.apiURL;
   providedIn: 'root',
 })
 export class ServiceService {
+  cadastro!: Cadastro;
   constructor(private snackBar: MatSnackBar, private httpClient: HttpClient) {}
 
   mensagem(texto: string): void {
@@ -29,7 +31,11 @@ export class ServiceService {
     return this.httpClient.get<Cadastro[]>(API);
   }
 
-  excluir(id: string): Observable<Cadastro> {
-    return this.httpClient.delete(API);
+  atualizar(cadastro: Cadastro): Observable<Cadastro> {
+    return this.httpClient.put(API, cadastro);
+  }
+
+  excluir(id: any) {
+    return this.httpClient.delete(API + id);
   }
 }

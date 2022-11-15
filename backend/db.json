@@ -6,29 +6,19 @@
       "tel": "(11) 9 9999-9999"
     },
     {
-      "id": 2,
-      "nome": "Felipe Oliveira",
-      "tel": "(11) 9 8888-8888"
+      "nome": "Teste",
+      "tel": "+ 55 (11) 1 1111-1111",
+      "id": 2
     },
     {
-      "nome": "as",
-      "tel": "as",
+      "nome": "Test2",
+      "tel": "+ 55 (11) 1 1111-1111",
       "id": 3
     },
     {
-      "nome": "Adriana Karina",
-      "tel": "11900000000",
-      "id": 4
-    },
-    {
-      "nome": "usuario1",
-      "tel": "111111111",
+      "nome": "Teste4",
+      "tel": "+ 55 (11) 1 1111-1111",
       "id": 5
-    },
-    {
-      "nome": "Mayone Ramos",
-      "tel": "000000000000",
-      "id": 6
     }
   ]
 }

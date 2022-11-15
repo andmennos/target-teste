@@ -1,26 +1,49 @@
 <mat-card>
   <mat-card-title>Novo Cadastro</mat-card-title>
-  <form>
-    <mat-form-field>
+  <div [formGroup]="parts">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
       <input
         matInput
         placeholder="Nome:"
-        [(ngModel)]="cadastro.nome"
         name="nome"
+        formControlName="nome"
+        required
       />
+      <mat-error *ngIf="parts.get('nome')!.invalid">{{
+        getErrorMessage()
+      }}</mat-error>
+      <mat-hint *ngIf="parts.get('nome')!.invalid">Informe seu nome</mat-hint>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Telefone</mat-label>
       <input
+        [imask]="imaskTel"
         matInput
         placeholder="Tel:"
-        [(ngModel)]="cadastro.tel"
         name="tel"
+        formControlName="tel"
+        required
       />
+      <mat-error *ngIf="parts.get('tel')!.invalid">{{
+        getErrorMessageTel()
+      }}</mat-error>
+      <mat-hint *ngIf="parts.get('nome')!.invalid"
+        >Inclua o código de área</mat-hint
+      >
     </mat-form-field>
-  </form>
-  <button mat-raised-button (click)="criaCadastro()" color="primary">
-    Salvar
-  </button>
+    <button
+      [disabled]="parts.invalid"
+      (click)="criaCadastro()"
+      mat-raised-button
+      color="primary"
+    >
+      Salvar
+    </button>
 
-  <button mat-raised-button (click)="limpar()">Limpar</button>
+    <button mat-raised-button color="primary" (click)="limpar()">Limpar</button>
+    <button mat-raised-button color="primary" (click)="verLista()">
+      Ver Lista
+    </button>
+  </div>
 </mat-card>

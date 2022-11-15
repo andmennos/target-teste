@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './components/home/home.module';
-import { ListaModule } from './components/lista/lista.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +13,6 @@ import { ListaModule } from './components/lista/lista.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeModule,
-    ListaModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
