@@ -30,3 +30,13 @@ OBS: no MatTable habilitar recursos do próprio componente:
 
 3 - Exclusão
 
+Execução:
+1 - Clone o projeto;
+2 - Instale as dependências;
+3 - Inicie o backend; e
+4 - Inicie o projeto.
+
+<div align="center">
+  <a href="https://picasion.com/"><img src="https://i.picasion.com/pic92/ed12b6f49208f34168947724c849e96b.gif" width="400" height="256" border="0"alt="https://picasion.com/" /></a><br/>
+</div>
+
